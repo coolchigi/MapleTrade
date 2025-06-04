@@ -3,8 +3,7 @@
 Welcome to **MapleTrade**—an intelligent, agent-driven platform designed to empower Canadian day traders. Built with Google’s Agent Development Kit (ADK), MapleTrade fills a unique gap in Canadian fintech by combining real-time data, explainable AI, and educational insights.
 
 
-## 📑 Table of Contents
-
+## Table of Contents
 - [About](#about)
 - [Motivation](#motivation)
 - [Project Concept](#project-concept)
@@ -18,12 +17,12 @@ Welcome to **MapleTrade**—an intelligent, agent-driven platform designed to em
 - [Roadmap](#roadmap)
 
 
-## 📝 About
+## About 📝
 
 **MapleTrade** is a multi-agent trading assistant uniquely tailored for Canadian day traders. It leverages Google’s Agent Development Kit (ADK) and Google Cloud to provide real-time intelligence, actionable trade ideas, and educational support for trading on Canadian markets.
 
 
-## 🍁 Motivation
+## Motivation 🍁
 
 While there are many trading tools globally, Canadian traders face unique challenges: limited local tools, complex tax/compliance laws, and a lack of educational resources. MapleTrade addresses this gap by:
 
@@ -33,7 +32,7 @@ While there are many trading tools globally, Canadian traders face unique challe
 - Orchestrating specialized agents for automation and insight
 
 
-## 💡 Project Concept
+## Project Concept 💡
 
 MapleTrade is a **multi-agent trading assistant** that helps you:
 
@@ -44,7 +43,7 @@ MapleTrade is a **multi-agent trading assistant** that helps you:
 5. **Educate & Alert:** Explain decisions, surface learning tips, and notify about compliance issues.
 
 
-## 🧠 Agent Architecture
+## Agent Architecture 🧠
 
 MapleTrade leverages ADK to orchestrate several specialized agents:
 
@@ -57,7 +56,7 @@ MapleTrade leverages ADK to orchestrate several specialized agents:
 | **Compliance Agent** (opt) | Checks trades for Canadian regulations (PDT, capital gains, TFSA/RRSP, etc.)   |
 | **User Agent**             | Provides dashboard, explanations, alerts, and educational guidance            |
 
-### ☁️ Google Cloud Integrations
+### Google Cloud Integrations ☁️
 
 - **ADK:** Orchestrates agent workflows
 - **BigQuery:** Stores & analyzes historical trade data
@@ -66,17 +65,17 @@ MapleTrade leverages ADK to orchestrate several specialized agents:
 - **Cloud Run:** Hosts user interface/dashboard
 
 
-## 🚀 Getting Started
+## Getting Started 🚀
 
 > _MapleTrade is in early development. Stay tuned for install instructions, agent demos, and a dashboard preview!_
 
-### 🛠️ Prerequisites
+### Prerequisites 🛠️
 
 - Google Cloud account (for ADK and cloud integrations)
 - API keys for market data/news (TBD)
 - Python 3.9+ (project baseline)
 
-### ⚙️ Setup
+### Setup ⚙️
 
 ```bash
 # Clone the repo
@@ -87,17 +86,17 @@ cd MapleTrade
 ```
 
 
-## 🤝 Contributing
+## Contributing 🤝
 
 Canadian fintech is better together! If you want to contribute or have ideas, open an issue or pull request.
 
 
-## 📚 License
+## License 📚
 
 MIT License
 
 
-## 🛣️ Roadmap
+## Roadmap 🛣️
 
 - [ ] Build Market Data Agent for TSX/TSXV
 - [ ] Integrate News & Sentiment Agent (Reddit, StockTwits, News APIs)
