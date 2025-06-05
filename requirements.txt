@@ -1,5 +1,9 @@
-google-adk
+google-adk>=1.0.0
 yfinance>=0.2.18
 pandas>=1.5.0
-numpy>=1.24.0
 python-dotenv>=1.0.0
+requests>=2.31.0
+fmp-python>=0.1.4
+fmp-python
+numpy>=1.24.0
+python-dateutil>=2.8.0
