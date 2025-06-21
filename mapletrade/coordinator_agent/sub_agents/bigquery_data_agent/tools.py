@@ -8,7 +8,7 @@ from google.cloud import bigquery
 import os
 from datetime import datetime
 
-def store_market_data(symbol: str, data: Dict) -> Dict:
+def store_market_data(symbol: str, price: float, volume: int, source: str = "API") -> Dict:
     """
     Store TSX market data in BigQuery.
     
@@ -30,10 +30,10 @@ def store_market_data(symbol: str, data: Dict) -> Dict:
         row = {
             'symbol': symbol,
             'timestamp': datetime.now().isoformat(),
-            'price': data.get('price'),
-            'volume': data.get('volume'),
-            'market_cap': data.get('market_cap'),
-            'source': data.get('source', 'Unknown')
+            'price': price,
+            'volume': volume,
+            'market_cap': None,  # Calculate separately if needed
+            'source': source
         }
         
         table_ref = client.dataset(dataset_id).table(table_id)
