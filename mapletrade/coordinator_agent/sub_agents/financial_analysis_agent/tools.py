@@ -26,7 +26,7 @@ def calculate_basic_ratios(symbol: str) -> Dict:
     if not symbol.endswith('.TO'):
         symbol = f"{symbol}.TO"
     
-    fmp_symbol = symbol.replace('.TO', '.TRT')
+    fmp_symbol = symbol
     
     try:
         # Try FMP first
