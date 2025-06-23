@@ -6,6 +6,9 @@ Coordinator Agent using proper ADK session state communication
 from google.adk.agents import LlmAgent
 from .sub_agents.data_collection_agent.agent import root_agent as data_agent
 from .sub_agents.financial_analysis_agent.agent import root_agent as financial_agent
+from .sub_agents.bigquery_data_agent.agent import root_agent as bigquery_agent
+from .sub_agents.compliance_agent.agent import root_agent as compliance_agent
+# from .sub_agents.financial_education_agent.agent import root_agent as education_agent
 
 root_agent = LlmAgent(
     name="mapletrade_coordinator",
@@ -13,17 +16,20 @@ root_agent = LlmAgent(
     description="Canadian trading assistant coordinator using session state communication",
     instruction="""You coordinate Canadian trading analysis using proper multi-agent workflows.
 
-AGENT DELEGATION:
-- Route data collection requests to data_collection_agent
-- Route financial analysis requests to financial_analysis_agent
-- Use session state to share data between agents
+AGENT DELEGATION WORKFLOW:
+1. Data Collection → financial analysis → BigQuery storage → compliance check → education
+2. Use session state for data flow between agents
+3. Always provide educational context
 
-When user asks for financial analysis:
-1. Delegate to financial_analysis_agent
-2. Agent will read data from session state automatically
-3. Explain the analysis results
+DELEGATION STRATEGY:
+- Complex financial analysis: → financial_analysis_agent  
+- Data collection: → data_collection_agent
+- Historical analysis: → bigquery_data_agent
+- Tax/compliance questions: → compliance_agent
+- Educational content: → financial_education_agent
 
-Always actually delegate to sub-agents, don't just describe what you would do.""",
+
+Always explain the multi-agent workflow to users for transparency.""",
     
-    sub_agents=[data_agent, financial_agent]  # Start with just one sub-agent
+    sub_agents=[data_agent, financial_agent, bigquery_agent, compliance_agent]
 )
